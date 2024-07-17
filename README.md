@@ -2,7 +2,7 @@
 
 In the second lecture this week, we saw how to use state machines to control potentially complex combinations of animations in response to input and other events in an environment. We also saw how state machines can be implemented in Unity using an Animation Controller. In this practical, you’re going to put these ideas into practice by controlling multiple animations on a character.
 
-By the end of this practical, you’ll be able to control a character, and most other kinds of, animations in Unity using an Animation Controller. In particular you’ll be able to:
+By the end of this practical, you’ll be able to control a character, and most other kinds of, animations in Unity using an Animation Controller. In particular, you’ll be able to:
 
 -	Import animations into Unity and attach them to a model (in this case a character)
 -	Create a state machine that defines the order those animations can play in
@@ -29,7 +29,7 @@ Once you’ve done this, press play and explore the scene using the new third pe
 -	CTRL to walk slowly (and as you’ll see later crouch)
 
 ## Task 2: Downloading and adding a character with an idle animation:
-You might have noticed that the ThirdPersonController prefab doesn’t actually show a character. Rather, the player is represented in the scene using a simple capsule shaped object. In this task, we’re going to change this by downloading a character, and an associated animation, and replacing the capsule with them.
+You might have noticed that the ThirdPersonController prefab does not actually show a character. Rather, the player is represented in the scene using a simple capsule shaped object. In this task, we’re going to change this by downloading a character, and an associated animation, and replacing the capsule with them.
 
 We’ll be sourcing our characters from https://www.mixamo.com/. This is a service that you can access with your Adobe account (university login). It provides a library of characters and animations that can be applied to them.
 
@@ -46,7 +46,7 @@ You might have noticed that your character just floats around the scene like a s
 
 Before we do this, we’re going to give that animation a new name. Mixamo calls all of its animations “mixamo.com”, which can get a little confusing when we start working with multiple animation states. To fix this, expand the prefab (click on the little arrow) and click on the asset represented by the little turquoise triangle (Unity’s icon for animations). Choose edit in the menu that appears in the inspector and see if you can find the option for changing its name to something more meaningful (e.g. “Idle”).
 
-Next we want to add this newly named animation to our character so it’ll play when the character stands still. To do this, simply drag the animation asset into the inspector for your character in the scene. When you do this, a new component should appear called an “Animator”. We will use this component to control this and other animations throughout the rest of the class.
+Next we want to add this newly named animation to our character, so it’ll play when the character stands still. To do this, simply drag the animation asset into the inspector for your character in the scene. When you do this, a new component should appear called an “Animator”. We will use this component to control this and other animations throughout the rest of the class.
 
 To complete the task, press play and observe what happens.
 
@@ -54,10 +54,10 @@ To complete the task, press play and observe what happens.
 
 When you pressed play you should have noticed that the idle animation played just once before the character returned to being stationary. Not ideal! In this task we’re going to see how to use the AnimationController to fix this.
 
-To access the Animation Controller for the character, look at the Animator component you created earlier. You should see that its got a parameter called “Controller”. If you click on the value in this parameter’s box, the Animation Controller user interface that we saw in the lecture will appear. 
+To access the Animation Controller for the character, look at the Animator component you created earlier. You should see that it's got a parameter called “Controller”. If you click on the value in this parameter’s box, the Animation Controller user interface that we saw in the lecture will appear. 
 Do this, and look at the state machine. Can you work out what it does and why it makes the idle animation play just once when the game starts?
 
-To complete the task, see if you can edit the state machine such that the idle animation plays on a loop all the time. To find the solution to this task, you should double click on the animation state representing the idle animation. Explore the options that appear in the inspector for configuring the animation. Is there one that’ll make it loop?
+To complete the task, see if you can edit the state machine such that the idle animation plays on a loop all the time. To find the solution to this task, you should double-click on the animation state representing the idle animation. Explore the options that appear in the inspector for configuring the animation. Is there one that’ll make it loop?
 
 ## Task 5: Creating a transition between animation states
 You now should have a character with a looping idle animation, which is great until our character moves. At this point, we might want to play a walking animation instead. In this task, we’re going to try and do that.
@@ -70,7 +70,7 @@ To get started with this task, go back to Mixamo and download a walking animatio
 Now you’ve got this new animation file, see if you can do the following:
 
 1. Import the new animation into Unity and add it as an additional state in the animation controller
-2. Create a transition between the idle state and the walk state (you can make new transitions by right clicking on the state you want to transition from, choosing “Make transition” and then clicking on the state you want to transition to).
+2. Create a transition between the idle state and the walk state (you can make new transitions by right-clicking on the state you want to transition from, choosing “Make transition” and then clicking on the state you want to transition to).
 
 Press play and see what happens, does it do what you expect?
 
@@ -103,7 +103,7 @@ To complete the task, see if you can repeat the process above in order to make a
 ## Task 7: Getting creative with lots of animations
 It might seem like we’ve gone through a very long and complex process in order to play an animation when the user presses the up arrow! What’s important to note, however, is that you’ve now learned all the basic concepts you need in order to create far more complex animation state machines that comprise many animations that respond to many different parameters.
 
-For the remainder of the practical, see if you can use the principles you’ve learned about in tasks 1-6 to extend your animation state machine so it includes additional animations, such as:
+For the remainder of the practical, see if you can use the principles you’ve learned about in tasks 1-6 to extend your animation state machine, so it includes additional animations, such as:
 
 -	Walking back – plays when the character walks backward by pressing down
 -	Running – plays when the player runs by holding shift
@@ -114,10 +114,10 @@ For the remainder of the practical, see if you can use the principles you’ve l
 -	Crouch walk – plays when the player walks forward while crouching
 -	Crouch walk back – plays when the player walks backward while couching
 
-You should be able to implement all of the logic for controlling these animations using a single state machine, with only minimal lines of code needed to set the values of parameters. I’ve provided the information you should need to pass to the state machine as inputs to the ApplyAnimations method, meaning you shouldn’t need to change the code in the Update method to complete this task.
+You should be able to implement all the logic for controlling these animations using a single state machine, with only minimal lines of code needed to set the values of parameters. I’ve provided the information you should need to pass to the state machine as inputs to the ApplyAnimations method, meaning you shouldn’t need to change the code in the Update method to complete this task.
 
 ## Additional Optional Tasks
 - Can you extend the ThirdPersonController script to support strafing with associated animations?
 - Can you create one of your own animations in Maya and include it into the state machine?
 -	Can you make your character play a falling animation when it falls from a height?
--	You might notice the third person controller doesn’t jump over obstacles! Can you fix this?
+-	You might notice the third person controller does not jump over obstacles! Can you fix this?
