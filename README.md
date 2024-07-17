@@ -87,7 +87,7 @@ You can define conditions by clicking on a transition (i.e. click on the arrow b
 
 Now you’ve got a parameter and a condition set up. But you might be wondering how you tell the animation control what the player’s current movement speed is to trigger the condition. You can do this by using some simple lines of code in a script, which pass a value to the state machine. For example, the snippet below shows how to tell the state machine that it should set its “movementSpeed” parameter to have a value defined by a variable called movement.
 
-```
+```csharp
 Animator animator = GetComponentInChildren<Animator>();
 animator.SetFloat("movementSpeed", movement);
 ```
