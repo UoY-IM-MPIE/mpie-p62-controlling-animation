@@ -1,6 +1,6 @@
-# Practical 6.2: Controlling Animations in Unity
+# Practical 6: Controlling Animations in Unity
 
-In the second lecture this week, we saw how to use state machines to control potentially complex combinations of animations in response to input and other events in an environment. We also saw how state machines can be implemented in Unity using an Animation Controller. In this practical, you’re going to put these ideas into practice by controlling multiple animations on a character.
+In the  lecture this week, we saw how to use state machines to control potentially complex combinations of animations in response to input and other events in an environment. We also saw how state machines can be implemented in Unity using an Animation Controller. In this practical, you’re going to put these ideas into practice by controlling multiple animations on a character.
 
 By the end of this practical, you’ll be able to control a character, and most other kinds of, animations in Unity using an Animation Controller. In particular, you’ll be able to:
 
@@ -9,6 +9,9 @@ By the end of this practical, you’ll be able to control a character, and most 
 -	Control that state machine by setting the value of parameters in response to inputs and other information about the state of the environment.
 
 These instructions assume you’ll be using the adventure game scene from previous practical classes as the basis of this practical. However, you might also choose to use the terrain you created in week 2, should you wish to see how an animated character might behave in that environment.
+
+## Task 0: Animating in Blender
+Should you wish to explore animating in Blender, you can follow [this practical](https://github.com/UoY-IM-MPIE/mpie-p61-animation/tree/main)  which guides you through some basic Blender animations 
 
 ## Task 1: Downloading and adding the third person character controller 
 In the practical today you’ll be working in the adventure game scene from a previous practical. Therefore, to get started, open up this scene. When doing this, you might wish to save a copy of the scene as it was at the end of the last practical you used it in, because we’ll be changing how you interact with it quite a bit.
@@ -116,8 +119,4 @@ For the remainder of the practical, see if you can use the principles you’ve l
 
 You should be able to implement all the logic for controlling these animations using a single state machine, with only minimal lines of code needed to set the values of parameters. I’ve provided the information you should need to pass to the state machine as inputs to the ApplyAnimations method, meaning you shouldn’t need to change the code in the Update method to complete this task.
 
-## Additional Optional Tasks
-- Can you extend the ThirdPersonController script to support strafing with associated animations?
-- Can you create one of your own animations in Blender and include it into the state machine?
--	Can you make your character play a falling animation when it falls from a height?
--	You might notice the third person controller does not jump over obstacles! Can you fix this?
+
