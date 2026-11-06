@@ -41,6 +41,8 @@ To complete the task, you should log into Mixamo and:
 1. Choose a character that you would like to feature in your scene (when you’ve found one you like, simply click on it and choose “use this character”).
 2. Search for an idle animation and apply it to the character (click on the animations tab, search for “idle” and then click on the animation to see it applied to your character).
 3. Download the character and animation to your computer (you should save the character as an FBX Binary with skin applied and animations at 30fps).
+4. Replace the white capsule with your new character model.
+5. If the character textures are not loading correctly, select the model in your assets folder. In the inspector go to the materials tab. Change Location from “Use embedded materials” to “Use external materials (Legacy)”. Click Apply. 
 
 To complete the task, see if you can replace the white capsule on the ThirdPersonController, such that you see the character move around the environment in its place when playing the scene.
 
