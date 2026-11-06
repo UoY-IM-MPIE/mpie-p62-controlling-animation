@@ -22,7 +22,7 @@ I’ve provided a simplified third person character controller that you can use 
 
 1. Download the third-person-controller.unitypackage within this Git repository
 2. Delete (or disable) the “FPSController” game object from the hierarchy
-3. Drag the “ThirdPersonController” prefab from the “Animation Practical Assets” folder into the scene
+3. Drag the third-person-controller package that you downloaded into your assets folder. Import the package when prompted to do so. 
 
 Once you’ve done this, press play and explore the scene using the new third person character controller. You should see it has the following controls:
 
